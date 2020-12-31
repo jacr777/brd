@@ -1,0 +1,16 @@
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\BusinessRequirements.Models.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\BusinessRequirements.Models.pdb
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\obj\Debug\BusinessRequirements.Models.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\obj\Debug\BusinessRequirements.Models.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\obj\Debug\BusinessRequirements.Models.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\obj\Debug\BusinessRequirements.Models.pdb
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\BusinessRequirements.Models.dll.config
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\EntityFramework.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\EntityFramework.xml
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Models\obj\Debug\BusinessRequirements.Models.csproj.CopyComplete

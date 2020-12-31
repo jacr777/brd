@@ -1,0 +1,16 @@
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\BusinessRequirements.Contracts.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\BusinessRequirements.Contracts.pdb
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\obj\Debug\BusinessRequirements.Contracts.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\obj\Debug\BusinessRequirements.Contracts.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\obj\Debug\BusinessRequirements.Contracts.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\obj\Debug\BusinessRequirements.Contracts.pdb
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\BusinessRequirements.Contracts.dll.config
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\EntityFramework.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\EntityFramework.SqlServer.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\EntityFramework.xml
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\EntityFramework.SqlServer.xml
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Contracts\obj\Debug\BusinessRequirements.Contracts.csproj.CopyComplete
