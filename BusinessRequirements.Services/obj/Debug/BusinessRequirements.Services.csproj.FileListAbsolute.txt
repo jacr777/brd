@@ -14,3 +14,9 @@ C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Services\bin\Debu
 C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Services\obj\Debug\BusinessRequirements.Services.csproj.CopyComplete
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Services\bin\Debug\BusinessRequirements.Data.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Services\bin\Debug\BusinessRequirements.Models.dll
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Services\bin\Debug\BusinessRequirements.Data.pdb
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Services\bin\Debug\BusinessRequirements.Data.dll.config
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Services\bin\Debug\BusinessRequirements.Models.pdb
+C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Services\bin\Debug\BusinessRequirements.Models.dll.config

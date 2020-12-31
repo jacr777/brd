@@ -10,7 +10,9 @@ namespace BusinessRequirements.Data
     public class Project
     {
         [Key]
-        public int PorjectId { get; set; }
+        public int ProjectId { get; set; }
+        [Required]
+        public Guid OwnerId { get; set; }
         [Required]
         public int Ticket { get; set; }
         [Required]

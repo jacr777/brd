@@ -57,11 +57,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProjectService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessRequirements.Data\BusinessRequirements.Data.csproj">
+      <Project>{17f6ce67-ec74-4a13-92d6-64243686d16d}</Project>
+      <Name>BusinessRequirements.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessRequirements.Models\BusinessRequirements.Models.csproj">
+      <Project>{87423726-9fce-4331-a27c-e0eaa2e08b35}</Project>
+      <Name>BusinessRequirements.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

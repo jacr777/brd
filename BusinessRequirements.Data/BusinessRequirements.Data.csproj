@@ -61,12 +61,22 @@
     <Compile Include="FR.cs" />
     <Compile Include="HLC.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202012311808246_001Migration.cs" />
+    <Compile Include="Migrations\202012311808246_001Migration.designer.cs">
+      <DependentUpon>202012311808246_001Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202012311808246_001Migration.resx">
+      <DependentUpon>202012311808246_001Migration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
