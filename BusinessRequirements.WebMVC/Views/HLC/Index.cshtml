@@ -1,0 +1,80 @@
+﻿@model IEnumerable<BusinessRequirements.Models.HLC.HLCListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>HLC Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Project)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLCId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLCNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLCDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Project)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HLCId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HLCNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HLCDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUtc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedUtc)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.HLCId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.HLCId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.HLCId })
+            </td>
+        </tr>
+    }
+
+</table>

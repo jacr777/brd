@@ -2,6 +2,9 @@
 using BusinessRequirements.Services;
 using Microsoft.AspNet.Identity;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace BusinessRequirements.WebMVC.Controllers
@@ -9,7 +12,7 @@ namespace BusinessRequirements.WebMVC.Controllers
     [Authorize]
     public class ProjectController : Controller
     {
-        // GET: Project
+        // GET: LIST(Project)
         public ActionResult Index()
         {
             var service = CreateProjectService();
@@ -35,7 +38,6 @@ namespace BusinessRequirements.WebMVC.Controllers
                 return RedirectToAction("Index");
             };
             ModelState.AddModelError("", "Project could not be created.");
-
             return View(model);
         }
 

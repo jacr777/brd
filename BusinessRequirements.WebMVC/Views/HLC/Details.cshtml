@@ -1,0 +1,74 @@
+﻿@model BusinessRequirements.Models.HLC.HLCDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HLCDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HLCId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HLCId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HLCNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HLCNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HLCDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HLCDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HLCId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
