@@ -61,13 +61,9 @@
     <Compile Include="FR.cs" />
     <Compile Include="HLC.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202012311808246_001Migration.cs" />
-    <Compile Include="Migrations\202012311808246_001Migration.designer.cs">
-      <DependentUpon>202012311808246_001Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012311959443_002Migration.cs" />
-    <Compile Include="Migrations\202012311959443_002Migration.designer.cs">
-      <DependentUpon>202012311959443_002Migration.cs</DependentUpon>
+    <Compile Include="Migrations\202101050207544_001Migration.cs" />
+    <Compile Include="Migrations\202101050207544_001Migration.designer.cs">
+      <DependentUpon>202101050207544_001Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
@@ -78,15 +74,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012311808246_001Migration.resx">
-      <DependentUpon>202012311808246_001Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101050207544_001Migration.resx">
+      <DependentUpon>202101050207544_001Migration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012311959443_002Migration.resx">
-      <DependentUpon>202012311959443_002Migration.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Migrations\202012311958593_002Migration\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

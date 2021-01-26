@@ -15,7 +15,7 @@ namespace BusinessRequirements.WebMVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Business Requirements System";
 
             return View();
         }

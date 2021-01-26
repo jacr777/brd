@@ -16,4 +16,3 @@ C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Data\obj\Debug\Bu
 C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Data\obj\Debug\BusinessRequirements.Data.pdb
 C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Data\obj\Debug\BusinessRequirements.Data.Migrations._001Migration.resources
 C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Data\obj\Debug\BusinessRequirements.Data.csproj.GenerateResource.cache
-C:\ElevenFiftyProjects\redbadge\br_system\BusinessRequirements.Data\obj\Debug\BusinessRequirements.Data.Migrations._002Migration.resources

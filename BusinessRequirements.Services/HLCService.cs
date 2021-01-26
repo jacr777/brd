@@ -26,21 +26,20 @@ namespace BusinessRequirements.Services
                     HLCDescription = model.HLCDescription,
                     CreatedUtc = DateTimeOffset.Now
                 };
-
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.HLCs.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<HLCListItem> GetHLCs()
+        public IEnumerable<HLCListItem> GetHLCs(int? projectId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                         .HLCs
-                        .Where(e => e.OwnerId == _userId)
+                        .Where(e => e.OwnerId == _userId && (projectId != null ? e.ProjectId == projectId: true))
                         .Select(
                             e =>
                                 new HLCListItem
@@ -50,14 +49,13 @@ namespace BusinessRequirements.Services
                                     HLCDescription = e.HLCDescription,
                                     ProjectId = e.ProjectId,
                                     Project = e.Project.ProjectName,
+                                    ModifiedUtc = e.ModifiedUtc,
                                     CreatedUtc = e.CreatedUtc
                                 }
                         );
-
                 return query.ToArray();
             }
         }
-
         public HLCDetail GetHLCById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -88,28 +86,26 @@ namespace BusinessRequirements.Services
                         .HLCs
                         .Single(e => e.HLCId == model.HLCId && e.OwnerId == _userId);
                 entity.HLCNumber = model.HLCNumber;
+                entity.ProjectId = model.ProjectId;
                 entity.HLCDescription = model.HLCDescription;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }
         }
-
-        public bool DeleteHLC(int noteId)
+        public bool DeleteHLC(int HLCId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .HLCs
-                        .Single(e => e.HLCId == noteId && e.OwnerId == _userId);
+                        .Single(e => e.HLCId == HLCId && e.OwnerId == _userId);
 
                 ctx.HLCs.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }
         }
-
-
     }
 }

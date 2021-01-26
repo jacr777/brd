@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessRequirements.Models.HLC
 {
-    public class HLCEdit
-    {
+    public class HLCEdit    {
 
         public int ProjectId { get; set; }
         public string Project { get; set; }

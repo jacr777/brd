@@ -1,13 +1,11 @@
-﻿@model IEnumerable<BusinessRequirements.Models.HLC.HLCListItem>
+﻿@model IEnumerable<BusinessRequirements.Models.BR.BRListItem>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>HLC Index</h2>
+<h2>BR List</h2>
 
-<p>
-</p>
 @if (TempData.ContainsKey("SaveResult"))
 {
     <div class="alert alert-success fade in" role="alert">
@@ -21,13 +19,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Project)
+            @Html.DisplayNameFor(model => model.ProjectName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.HLCNumber)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HLCDescription)
+            @Html.DisplayNameFor(model => model.BRNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessRequirement)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
@@ -35,25 +36,26 @@
         <th>
             @Html.DisplayNameFor(model => model.ModifiedUtc)
         </th>
-
         <th></th>
     </tr>
-
-    @{int pId = 0; }
-    
+    @{ int pId = 0;}
     @foreach (var item in Model)
     {
         <tr>
-            @Html.HiddenFor(modelItem => item.ProjectId)
-            <td>
-                @Html.DisplayFor(modelItem => item.Project)
-            </td>
             @Html.HiddenFor(modelItem => item.HLCId)
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.HLCNumber)
             </td>
+            @Html.HiddenFor(modelItem => item.BRId)
             <td>
-                @Html.DisplayFor(modelItem => item.HLCDescription)
+                @Html.DisplayFor(modelItem => item.BRNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessRequirement)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CreatedUtc)
@@ -62,18 +64,18 @@
                 @Html.DisplayFor(modelItem => item.ModifiedUtc)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.HLCId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.HLCId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.HLCId })
+                @Html.ActionLink("Edit", "Edit", new { id = item.BRId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BRId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BRId })
             </td>
         </tr>
         pId = item.ProjectId;
+
     }
 
 </table>
 
 <p>
     @Html.ActionLink("Back to Project Details", "Details", "Project", new { id = pId }, null) |
-    @Html.ActionLink("New HLC", "Create", new { projectid = pId}, null)
+    @Html.ActionLink("Back to HLC List", "Index", "HLC", new { projectid = pId}, null)
 </p>
-

@@ -8,5 +8,6 @@ namespace BusinessRequirements.Data
 {
     public class FR
     {
+        // Placeholder for Strech goal
     }
 }

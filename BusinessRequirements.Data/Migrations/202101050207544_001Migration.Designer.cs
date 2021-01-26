@@ -13,7 +13,7 @@ namespace BusinessRequirements.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202012311808246_001Migration"; }
+            get { return "202101050207544_001Migration"; }
         }
         
         string IMigrationMetadata.Source

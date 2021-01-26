@@ -19,13 +19,12 @@ namespace BusinessRequirements.Data
         public int HLCNumber { get; set; }
         [Required]
         [Display(Name = "HLC Description")]
-        [MaxLength(50, ErrorMessage = "There are too many characters in this field.")]
+        [MaxLength(600, ErrorMessage = "There are too many characters in this field.")]
         public string HLCDescription { get; set; }
 
         [ForeignKey(nameof(Project))]
         public int ProjectId { get; set; }
         public virtual Project Project { get; set; }
-
 
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }

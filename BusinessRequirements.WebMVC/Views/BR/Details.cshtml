@@ -1,25 +1,26 @@
-﻿@model BusinessRequirements.Models.HLC.HLCDetail
+﻿@model BusinessRequirements.Models.BR.BRDetail
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2></h2>
+<h2>Details</h2>
 
 <div>
-    <h4>HLC Details</h4>
+    <h4>Business Requirement Details</h4>
     <hr />
     <dl class="row">
         @Html.HiddenFor(model => model.ProjectId)
         @Html.HiddenFor(model => model.HLCId)
-
+        @Html.HiddenFor(model => model.BRId)
          <dt class="col-sm-3 text-left">
-            @Html.DisplayNameFor(model => model.Project)
+            @Html.DisplayNameFor(model => model.ProjectName)
         </dt>
 
          <dd class="col-sm-9 text-left">
-            @Html.DisplayFor(model => model.Project)
+            @Html.DisplayFor(model => model.ProjectName)
         </dd>
+
          <dt class="col-sm-3 text-left">
             @Html.DisplayNameFor(model => model.HLCNumber)
         </dt>
@@ -29,11 +30,19 @@
         </dd>
 
          <dt class="col-sm-3 text-left">
-            @Html.DisplayNameFor(model => model.HLCDescription)
+            @Html.DisplayNameFor(model => model.BRNumber)
         </dt>
 
          <dd class="col-sm-9 text-left">
-            @Html.DisplayFor(model => model.HLCDescription)
+            @Html.DisplayFor(model => model.BRNumber)
+        </dd>
+
+         <dt class="col-sm-3 text-left">
+            @Html.DisplayNameFor(model => model.BusinessRequirement)
+        </dt>
+
+         <dd class="col-sm-9 text-left">
+            @Html.DisplayFor(model => model.BusinessRequirement)
         </dd>
 
          <dt class="col-sm-3 text-left">
@@ -54,10 +63,10 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.HLCId }) |
-    @Html.ActionLink("Back to HLC List", "Index", "HLC", new { projectid = Model.ProjectId }, null) |
-    @Html.ActionLink("New BRs", "Create", "BR", new { projectId = Model.ProjectId, hlcId = Model.HLCId }, null) |
-    @Html.ActionLink("View BRDs", "Index", "BR", new { hlcId = Model.HLCId }, null) |
 
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BRId }) |
+    @Html.ActionLink("Back to BR List", "Index", "BR", new { projectId = Model.ProjectId }, null)
 </p>
+
+

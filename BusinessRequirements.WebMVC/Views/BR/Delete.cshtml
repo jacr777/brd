@@ -1,4 +1,4 @@
-﻿@model BusinessRequirements.Models.HLC.HLCDetail
+﻿@model BusinessRequirements.Models.BR.BRDetail
 
 @{
     ViewBag.Title = "Delete";
@@ -6,21 +6,23 @@
 
 <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this HLC?</h3>
+<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>HLCDetail</h4>
+    <h4>BRDetail</h4>
     <hr />
     <dl class="row">
-
         @Html.HiddenFor(model => model.ProjectId)
         @Html.HiddenFor(model => model.HLCId)
+        @Html.HiddenFor(model => model.BRId)
+
         <dt class="col-sm-3 text-left">
-            @Html.DisplayNameFor(model => model.Project)
+            @Html.DisplayNameFor(model => model.ProjectName)
         </dt>
 
         <dd class="col-sm-9 text-left">
-            @Html.DisplayFor(model => model.Project)
+            @Html.DisplayFor(model => model.ProjectName)
         </dd>
+
         <dt class="col-sm-3 text-left">
             @Html.DisplayNameFor(model => model.HLCNumber)
         </dt>
@@ -30,11 +32,19 @@
         </dd>
 
         <dt class="col-sm-3 text-left">
-            @Html.DisplayNameFor(model => model.HLCDescription)
+            @Html.DisplayNameFor(model => model.BRNumber)
         </dt>
 
         <dd class="col-sm-9 text-left">
-            @Html.DisplayFor(model => model.HLCDescription)
+            @Html.DisplayFor(model => model.BRNumber)
+        </dd>
+
+        <dt class="col-sm-3 text-left">
+            @Html.DisplayNameFor(model => model.BusinessRequirement)
+        </dt>
+
+        <dd class="col-sm-9 text-left">
+            @Html.DisplayFor(model => model.BusinessRequirement)
         </dd>
 
         <dt class="col-sm-3 text-left">
@@ -61,7 +71,7 @@
 
 <div class="form-actions no-color">
     <input type="submit" value="Delete" class="btn btn-danger" /> |
-    @Html.ActionLink("Back to HLC List", "Index", "HLC", new { projectid = Model.ProjectId }, null)
+    @Html.ActionLink("Back to BR List", "Index", "BR", new { projectId = Model.ProjectId }, null)
 </div>
     }
 </div>

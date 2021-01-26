@@ -4,65 +4,59 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2></h2>
 
 <div>
-    <h4>ProjectDetail</h4>
+    <h4>Project Details</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ProjectId)
-        </dt>
+    <dl class="row">
+        @Html.HiddenFor(model => model.ProjectId)
 
-        <dd>
-            @Html.DisplayFor(model => model.ProjectId)
-        </dd>
-
-        <dt>
+        <dt class="col-sm-3 text-left">
             @Html.DisplayNameFor(model => model.Ticket)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9 text-left">
             @Html.DisplayFor(model => model.Ticket)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3 text-left">
             @Html.DisplayNameFor(model => model.ProjectName)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9 text-left">
             @Html.DisplayFor(model => model.ProjectName)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3 text-left">
             @Html.DisplayNameFor(model => model.Area)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9 text-left">
             @Html.DisplayFor(model => model.Area)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3 text-left">
             @Html.DisplayNameFor(model => model.Budget)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9 text-left">
             @Html.DisplayFor(model => model.Budget)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3 text-left">
             @Html.DisplayNameFor(model => model.CreatedUtc)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9 text-left">
             @Html.DisplayFor(model => model.CreatedUtc)
         </dd>
 
-        <dt>
+        <dt class="col-sm-3 text-left">
             @Html.DisplayNameFor(model => model.ModifiedUtc)
         </dt>
 
-        <dd>
+        <dd class="col-sm-9 text-left">
             @Html.DisplayFor(model => model.ModifiedUtc)
         </dd>
 
@@ -71,5 +65,7 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ProjectId }) |
     @Html.ActionLink("Back to List", "Index") |
-    @Html.ActionLink("HLCs", "Index", "HLC")
-</p>
+    @Html.ActionLink("View HLCs", "Index", "HLC", new { projectId = Model.ProjectId }, null) |
+    @Html.ActionLink("New HLC", "Create", "HLC", new { projectId = Model.ProjectId }, null) |
+    @Html.ActionLink("View BRDs", "Index", "BR", new { projectId = Model.ProjectId }, null) 
+</p> 

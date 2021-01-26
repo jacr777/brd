@@ -57,6 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BR\BRCreate.cs" />
+    <Compile Include="BR\BRDetail.cs" />
+    <Compile Include="BR\BREdit.cs" />
+    <Compile Include="BR\BRListItem.cs" />
     <Compile Include="HLC\HLCCreate.cs" />
     <Compile Include="HLC\HLCDetail.cs" />
     <Compile Include="HLC\HLCEdit.cs" />
@@ -72,7 +76,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BR\" />
     <Folder Include="FR\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

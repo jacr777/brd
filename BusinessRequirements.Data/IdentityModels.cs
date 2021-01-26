@@ -33,7 +33,7 @@ namespace BusinessRequirements.Data
         }
         public DbSet<Project> Projects { get; set; }
         public DbSet<HLC> HLCs { get; set; }
-        //public DbSet<BR> BRs { get; set; }
+        public DbSet<BR> BRs { get; set; }
         //public DbSet<FR> FRs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

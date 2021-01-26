@@ -173,6 +173,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BRController.cs" />
     <Compile Include="Controllers\HLCController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -355,6 +356,11 @@
     <Content Include="Views\HLC\Details.cshtml" />
     <Content Include="Views\HLC\Edit.cshtml" />
     <Content Include="Views\HLC\Delete.cshtml" />
+    <Content Include="Views\BR\Index.cshtml" />
+    <Content Include="Views\BR\Edit.cshtml" />
+    <Content Include="Views\BR\Delete.cshtml" />
+    <Content Include="Views\BR\Create.cshtml" />
+    <Content Include="Views\BR\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

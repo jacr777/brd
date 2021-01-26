@@ -14,6 +14,7 @@ namespace BusinessRequirements.Models.Project
         [Display(Name = "Project")]
         public string ProjectName { get; set; }
         public string Area { get; set; }
+        [DataType(DataType.Currency)]
         public decimal Budget { get; set; }
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }

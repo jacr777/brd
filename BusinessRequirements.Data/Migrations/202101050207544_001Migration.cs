@@ -8,6 +8,41 @@
         public override void Up()
         {
             CreateTable(
+                "dbo.BR",
+                c => new
+                    {
+                        BRId = c.Int(nullable: false, identity: true),
+                        OwnerId = c.Guid(nullable: false),
+                        BRNumber = c.Int(nullable: false),
+                        BusinessRequirement = c.String(nullable: false, maxLength: 1000),
+                        HLCId = c.Int(nullable: false),
+                        ProjectId = c.Int(nullable: false),
+                        CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifiedUtc = c.DateTimeOffset(precision: 7),
+                    })
+                .PrimaryKey(t => t.BRId)
+                .ForeignKey("dbo.HLC", t => t.HLCId, cascadeDelete: true)
+                .ForeignKey("dbo.Project", t => t.ProjectId, cascadeDelete: false)
+                .Index(t => t.HLCId)
+                .Index(t => t.ProjectId);
+            
+            CreateTable(
+                "dbo.HLC",
+                c => new
+                    {
+                        HLCId = c.Int(nullable: false, identity: true),
+                        OwnerId = c.Guid(nullable: false),
+                        HLCNumber = c.Int(nullable: false),
+                        HLCDescription = c.String(nullable: false, maxLength: 600),
+                        ProjectId = c.Int(nullable: false),
+                        CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifiedUtc = c.DateTimeOffset(precision: 7),
+                    })
+                .PrimaryKey(t => t.HLCId)
+                .ForeignKey("dbo.Project", t => t.ProjectId, cascadeDelete: true)
+                .Index(t => t.ProjectId);
+            
+            CreateTable(
                 "dbo.Project",
                 c => new
                     {
@@ -100,16 +135,24 @@
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
+            DropForeignKey("dbo.BR", "ProjectId", "dbo.Project");
+            DropForeignKey("dbo.BR", "HLCId", "dbo.HLC");
+            DropForeignKey("dbo.HLC", "ProjectId", "dbo.Project");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
+            DropIndex("dbo.HLC", new[] { "ProjectId" });
+            DropIndex("dbo.BR", new[] { "ProjectId" });
+            DropIndex("dbo.BR", new[] { "HLCId" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
             DropTable("dbo.IdentityUserRole");
             DropTable("dbo.IdentityRole");
             DropTable("dbo.Project");
+            DropTable("dbo.HLC");
+            DropTable("dbo.BR");
         }
     }
 }

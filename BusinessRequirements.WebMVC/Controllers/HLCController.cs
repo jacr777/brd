@@ -13,18 +13,40 @@ namespace BusinessRequirements.WebMVC.Controllers
     public class HLCController : Controller
     {     
         // GET: LIST (HLC)
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    var service = CreateHLCService();
+        //    var model = service.GetHLCs();
+
+        //    return View(model);
+        //}
+
+        public ActionResult Index(int? projectId) //Using a nullable int, Accepts the id so we can pass the create the HLC with the project, it leaves the original functionality though is not used.
         {
             var service = CreateHLCService();
-            var model = service.GetHLCs();
+            var model = service.GetHLCs(projectId);
 
             return View(model);
         }
-        //GET : Create
-        public ActionResult Create()
+        ////GET : Create
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
+
+        //GET : Create with Id
+        public ActionResult Create(int? projectId)
         {
-            return View();
+            if(projectId == null) { return View(); }
+           
+            HLCCreate model = new HLCCreate()
+            {
+                ProjectId = (int) projectId
+            };
+                return View(model);
+
         }
+
         //POST : Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -32,14 +54,20 @@ namespace BusinessRequirements.WebMVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
             var service = CreateHLCService();
+
+          
+
             if (service.CreateHLC(model))
             {
                  TempData["SaveResult"] = "HLC was created";
-                 return RedirectToAction("Index");
+                 return RedirectToAction("Index", new {projectId = model.ProjectId }); //Redirect to the HLC view filtered by the project
             };
             ModelState.AddModelError("", "HLC Could not be createad");
             return View(model);
         }
+
+
+       
 
         public ActionResult Details(int id)
         {
@@ -57,6 +85,8 @@ namespace BusinessRequirements.WebMVC.Controllers
                 new HLCEdit
                 {
                     HLCId = detail.HLCId,
+                    ProjectId = detail.ProjectId,
+                    Project = detail.Project,
                     HLCNumber = detail.HLCNumber,
                     HLCDescription = detail.HLCDescription      
                 };
@@ -80,7 +110,7 @@ namespace BusinessRequirements.WebMVC.Controllers
             if (service.UpdateHLC(model))
             {
                 TempData["SaveResult"] = "HLC was updated.";
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { projectId = model.ProjectId });
             }
 
             ModelState.AddModelError("", "HLC could not be updated.");
@@ -106,13 +136,10 @@ namespace BusinessRequirements.WebMVC.Controllers
 
             service.DeleteHLC(id);
 
-            TempData["SaveResult"] = "Your note was deleted";
+            TempData["SaveResult"] = "Your BR was deleted";
 
             return RedirectToAction("Index");
         }
-
-
-
 
 
 
@@ -129,23 +156,6 @@ namespace BusinessRequirements.WebMVC.Controllers
 
 
 
-
-        //public ActionResult Create(HLCCreate model)
-        //{
-        //    if (ModelState.IsValid) return View(model);
-        //    var service = CreateHLCService();
-        //    if (service.CreateHLC(model))
-        //    {
-        //        TempData["SaveResult"] = "HLC was created.";
-        //        return RedirectToAction("Index");
-        //    };
-        //    ModelState.AddModelError("", "HLC could not be created.");
-
-        //    return View(model);
-        //}
-
-
-        //
 
 
     }
