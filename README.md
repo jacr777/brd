@@ -43,6 +43,12 @@ When you run your application:
       * Edit an HLC
       * Go back to the list of HLCs
 5. More navigation is present on the List/Index of both HLC and BR
+
+## *Links*
+https://docs.google.com/document/d/18vfgH5QnEKqYGfoO_j6dl2r71eZOdj060EXy4cDfTRg/edit#heading=h.apyy2fblhnhk
+https://lucid.app/lucidchart/ca6918ee-5ae1-4970-8202-820cb1912019/edit?beaconFlowId=BDCA440E0FFCF652&page=0_0#?folder_id=home&browser=icon
+https://trello.com/b/Y86UGrf3/redbadgeproject#
+      
       
 ## *Credits*
 This Program was made by:
